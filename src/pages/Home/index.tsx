@@ -1,10 +1,12 @@
-import Main from "./components/Main";
+import CoffeCard from "./components/OurCoffees";
+import Intro from "./components/Intro";
 import { HomeContainer } from "./styles";
 
 export default function Home(){
     return (
         <HomeContainer>
-            <Main />
+            <Intro />
+            <CoffeCard />
         </HomeContainer>
     )
 }
