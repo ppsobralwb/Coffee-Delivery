@@ -1,4 +1,4 @@
-import { IconButton, IconsContainer, IntroContainer, IntroContent, Title } from "./styles";
+import { IconsContainer, IntroContainer, IntroContent, Title } from "./styles";
 import hero from '../../../../assets/hero.svg'
 import { ShoppingCart, Timer, Coffee, Package } from 'phosphor-react'
 import { RegularText } from "../../../../components/Typography";
