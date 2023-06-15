@@ -1,4 +1,5 @@
 import { TitleText } from "../../../../components/Typography";
+import CoffeeCard from "../CoffeCard";
 import { CoffeeList, OurCoffeesContainer } from "./style";
 
 export default function OurCoffes() {
@@ -9,7 +10,7 @@ export default function OurCoffes() {
             </TitleText>
 
             <CoffeeList>
-                
+               <CoffeeCard />
             </CoffeeList>
         </OurCoffeesContainer>
     )

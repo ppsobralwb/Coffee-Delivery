@@ -1,9 +1,9 @@
 import { IconsContainer, IntroContainer, IntroContent, Title } from "./styles";
-import hero from '../../../../assets/hero.svg'
+import Hero from '../../../../assets/hero.svg'
 import { ShoppingCart, Timer, Coffee, Package } from 'phosphor-react'
 import { RegularText } from "../../../../components/Typography";
-import InfoWithIcon from "../../../../components/InfoWithIcon";
 import { useTheme } from "styled-components";
+import InfoWithIcon from "../../../../components/InfoWithIcon";
 
 export default function Intro() {
     const { colors } = useTheme();
@@ -44,7 +44,7 @@ export default function Intro() {
                     </IconsContainer>
                 </div>
                 
-                <img src={hero} alt="" />
+                <img src={Hero} alt="" />
                
             </IntroContent>
         </IntroContainer>

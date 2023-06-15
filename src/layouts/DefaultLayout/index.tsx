@@ -3,7 +3,7 @@ import  Header  from "../../components/Header";
 
 import { LayoutContainer } from "./styles";
 
-export function DefaultLayout() {
+export default function DefaultLayout() {
     return (
         <LayoutContainer>
             <Header />
