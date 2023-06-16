@@ -36,6 +36,7 @@ export const Type = styled.div`
         font-size: ${({ theme }) => theme.textSizes["components-tag"]};
         padding: 0.25rem 0.5rem;
         font-weight: 700;
+        text-transform: uppercase;
     }
 `
 export const Title = styled(TitleText).attrs({
