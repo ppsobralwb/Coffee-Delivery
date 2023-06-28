@@ -5,6 +5,7 @@ export const InfoWithIconContainer = styled.div`
     align-items: center;
     gap: 0.75rem;
 `
+
 interface IconContainerProps {
     color: string;
 }
