@@ -8,19 +8,21 @@ export default function Header() {
 
   return (
     <HeaderContainer className='container'>
-        <NavLink to='/'>
-          <img src={Logo} alt="CoffeDelivery" />
-        </NavLink>
-        
-        <HeaderButtonsContainer>
-          <HeaderButton variant='purple'>
-            <MapPin size={20} weight="fill" />
-            Porto Alegre, RS
-          </HeaderButton>
+      <NavLink to='/'>
+        <img src={Logo} alt="CoffeDelivery" />
+      </NavLink>
+
+      <HeaderButtonsContainer>
+        <HeaderButton variant='purple'>
+          <MapPin size={20} weight="fill" />
+          Porto Alegre, RS
+        </HeaderButton>
+        <NavLink to="/cart">
           <HeaderButton variant='yellow'>
             <ShoppingCart size={20} weight="fill" />
           </HeaderButton>
-        </HeaderButtonsContainer>
+        </NavLink>
+      </HeaderButtonsContainer>
     </HeaderContainer>
   )
 }

@@ -1,10 +1,11 @@
 import { useTheme } from "styled-components";
 import InfoForm from "./components/InfoForm"
-import { CartContainer, DeliveryAdress, Payment, PaymentButtonContainer } from "./styles"
+import { CartContainer, DeliveryAdress, Payment, PaymentButtonsContainer } from "./styles"
 import { MapPinLine, CurrencyDollar, CreditCard, Money, Bank } from 'phosphor-react'
 import { TitleText } from "../../components/Typography";
 import { PaymentButton } from "./components/PaymentButton";
 import { SelectedCoffees } from "./components/SelectedCoffees";
+import { AdressForm } from "./components/InfoForm/AdressForm";
 
 export default function Cart() {
     const { colors } = useTheme();
@@ -23,6 +24,7 @@ export default function Cart() {
                             subtitle={'Informe o endereço onde deseja receber seu pedido'}
                             color={colors["yellow-dark"]}
                         />
+                        <AdressForm />
                     </DeliveryAdress>
 
                     <Payment>
@@ -32,21 +34,21 @@ export default function Cart() {
                             subtitle={'O pagamento é feito na entrega. Escolha a forma que deseja pagar'}
                             color={colors["purple"]}
                         />
-                        <PaymentButtonContainer>
+                        <PaymentButtonsContainer>
                             <PaymentButton
-                                icon={<CreditCard size={16} color="purple" />}
-                                text="CARTÃO DE CRÉDITO"
+                                icon={<CreditCard size={16} />}
+                                text="cartão de crédito"
                             />
                             <PaymentButton
-                                icon={<Bank size={16} color="purple" />}
-                                text="CARTÃO DE DÉBITO"
+                                icon={<Bank size={16} />}
+                                text="cartão de débito"
                             />
                             <PaymentButton
-                                icon={<Money size={16} color="purple" />}
-                                text="DINHEIRO"
+                                icon={<Money size={16} />}
+                                text="dinheiro"
                             />
 
-                        </PaymentButtonContainer>
+                        </PaymentButtonsContainer>
 
                     </Payment>
                 </div>

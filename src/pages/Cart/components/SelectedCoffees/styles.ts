@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const SelectedCoffeesContainer = styled.div`
-    width: 100%;
     background: ${({ theme }) => theme.colors["base-card"]};
     border-radius: 6px 36px 6px 36px;
     padding: 2.5rem;
@@ -17,6 +16,7 @@ export const SelectedCoffeesContainer = styled.div`
         width: 23rem;
         display: flex;
         justify-content: space-between;
+        
     }
 `
 

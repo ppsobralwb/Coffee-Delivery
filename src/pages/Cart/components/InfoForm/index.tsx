@@ -16,8 +16,8 @@ export default function InfoForm({ icon, title, subtitle, color }: InfoFormProps
                 {icon}
             </IconContainer>
             <section>
-                <RegularText size="m" color="subtitle">{title}</RegularText>
-                <RegularText size="s" color="base-text">{subtitle}</RegularText>
+                <RegularText color="subtitle">{title}</RegularText>
+                <RegularText size="s" color="text">{subtitle}</RegularText>
             </section>
         </InfoFormContainer>
     )

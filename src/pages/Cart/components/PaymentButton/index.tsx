@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { RegularText } from "../../../../components/Typography";
 import { PaymentButtonContainer } from "./styles";
 
 interface PaymentButtonProps {
