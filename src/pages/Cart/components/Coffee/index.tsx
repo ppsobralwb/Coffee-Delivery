@@ -17,7 +17,6 @@ export function Coffee() {
                     </RegularText>
                     <RegularText size="m" color="text" weight={'bold-m'}>
                         R$ 9,90
-                        teste
                     </RegularText>
                 </CoffeeInfo>
                 <InteractionContainer>
