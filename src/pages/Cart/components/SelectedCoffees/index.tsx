@@ -1,10 +1,12 @@
 import { RegularText, TitleText } from "../../../../components/Typography";
+import { Coffee } from "../Coffee";
 import { ConfirmationButton, SelectedCoffeesContainer } from "./styles";
 
 export function SelectedCoffees() {
     return (
         <SelectedCoffeesContainer>
-            Objeto dos cafés
+            <Coffee />
+            <Coffee />
             <div className="Cost">
                 <section>
                     <RegularText size="s" color="text">Total de itens</RegularText>

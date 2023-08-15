@@ -17,7 +17,7 @@ export default function Intro() {
                             Encontre o café perfeito para qualquer hora do dia
                         </Title>
                         <RegularText size="l" color="subtitle" as="h3">
-                            Com o Coffe Delivery você recebe seu café onde estiver, a qualquer hora
+                            Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora
                         </RegularText>
                     </section>
                     <IconsContainer>

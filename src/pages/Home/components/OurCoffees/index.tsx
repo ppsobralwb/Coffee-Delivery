@@ -1,9 +1,9 @@
 import { TitleText } from "../../../../components/Typography";
 import { coffees } from "../../../../data/coffees";
-import CoffeeCard from "../CoffeCard";
+import CoffeeCard from "../CoffeeCard";
 import { CoffeeList, OurCoffeesContainer } from "./style";
 
-export default function OurCoffes() {
+export default function OurCoffees() {
     return (
         <OurCoffeesContainer className="container">
             <TitleText size="l" color="subtitle">
