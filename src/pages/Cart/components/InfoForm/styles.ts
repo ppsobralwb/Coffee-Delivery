@@ -9,7 +9,7 @@ export const InfoFormContainer = styled.div`
 export const IconContainer = styled.div`
     color: ${({ color }) => color};
 `
-export const AdressFormContainer = styled.div`
+export const AddressFormContainer = styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: 12.5rem 17.25rem 3.75rem;

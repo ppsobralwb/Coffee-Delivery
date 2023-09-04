@@ -1,6 +1,9 @@
+import { ConfirmedContainer } from "./styles";
 
 export default function Confirmed() {
     return (
-        <h1>CONFIRMED</h1>
+        <ConfirmedContainer>
+            <p>oi</p>
+        </ConfirmedContainer>
     )
 }

@@ -1,9 +1,9 @@
 import { Input } from "../../../../components/Input";
-import { AdressFormContainer } from "./styles";
+import { AddressFormContainer } from "./styles";
 
-export function AdressForm() {
+export function AddressForm() {
     return (
-        <AdressFormContainer>
+        <AddressFormContainer>
             <Input placeholder='CEP' type="number" className="cep"/>
             <Input placeholder='Rua' className="street"/>
             <Input placeholder='Número' type="number" />
@@ -11,6 +11,6 @@ export function AdressForm() {
             <Input placeholder='Bairro' />
             <Input placeholder='Cidade'/>
             <Input placeholder='UF' />
-        </AdressFormContainer>
+        </AddressFormContainer>
     )
 }
