@@ -1,8 +1,11 @@
 import { RegularText, TitleText } from "../../../../components/Typography";
+import { useCart } from "../../../../hooks/useCart";
 import { Coffee } from "../Coffee";
 import { ConfirmationButton, DetailsContainer, SelectedCoffeesContainer } from "./styles";
 
 export function SelectedCoffees() {
+    const { cartItems } = useCart();
+
     return (
         <SelectedCoffeesContainer className="container">
             <TitleText size="xs" color="subtitle">
@@ -10,8 +13,9 @@ export function SelectedCoffees() {
             </TitleText>
 
           <DetailsContainer>
-            <Coffee />
-            <Coffee />
+            {cartItems.map(item => (
+                <Coffee key={item.id} coffee={item} />
+            ))}
                 <section>
                     <RegularText size="s" color="text">Total de itens</RegularText>
                     <RegularText color="text">R$ 29,70</RegularText>

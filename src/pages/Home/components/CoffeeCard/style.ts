@@ -45,14 +45,14 @@ export const Title = styled(TitleText).attrs({
 })`
     margin-bottom: 0.5rem;
     font-weight: 700;
-`
+`;
 
 export const Description = styled(RegularText).attrs({
-    size:'s',
-    color: 'base-label',
-})`
-    margin: 2rem;
-`
+    size: "s",
+    color: "base-label",
+  })`
+    margin-bottom: 2rem;
+  `;
 
 export const CardFooter = styled.div`
     width: 100%;
