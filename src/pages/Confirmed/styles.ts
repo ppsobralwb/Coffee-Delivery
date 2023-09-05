@@ -2,7 +2,37 @@ import styled from "styled-components";
 
 export const ConfirmedContainer = styled.div `
     display: flex;
-    flex-direction: column.
+    flex-direction: column;
     gap: 2.5rem;
     margin-top: 5rem;
+
+    h1 {
+        color: ${({ theme }) => theme.colors["yellow-dark"]};
+    }
+
+    > section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+`;
+
+export const InfosContainer = styled.div `
+    background: ${({ theme}) => theme.colors['background']};
+    border-radius: 6px 36px 6px 36px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 32rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        z-index: -1;
+        border-radius: 7px 37px 7px 37px;
+        background: linear-gradient(102.89deg, #dbac2c 2.61%, #8047f8 98.76%);
+    }
 `
