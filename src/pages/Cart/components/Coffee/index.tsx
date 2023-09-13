@@ -14,7 +14,7 @@ interface CoffeeCartCardProps {
 export function Coffee({ coffee }: CoffeeCartCardProps) {
     const { colors } = useTheme();
 
-    const {changeCartItemQuantity} = useCart();
+    const {changeCartItemQuantity, removeCoffeeFromCart} = useCart();
 
     function handleIncrease() {
         changeCartItemQuantity(coffee.id, 'increase');
@@ -22,6 +22,10 @@ export function Coffee({ coffee }: CoffeeCartCardProps) {
 
     function handleDecrease() {
         changeCartItemQuantity(coffee.id, 'decrease');
+    }
+
+    function handleRemove() {
+        removeCoffeeFromCart(coffee.id);
     }
 
     const coffeeTotal = coffee.price * coffee.quantity;
@@ -42,7 +46,7 @@ export function Coffee({ coffee }: CoffeeCartCardProps) {
                 </CoffeeInfo>
                 <InteractionContainer>
                     <QuantityInput size="small" onIncrease={handleIncrease} onDecrease={handleDecrease} quantity={coffee.quantity} />
-                    <RemoveButton>
+                    <RemoveButton onClick={handleRemove}>
                         <Trash size={16} color={colors.purple}/>
                         REMOVER
                     </RemoveButton>
@@ -50,4 +54,8 @@ export function Coffee({ coffee }: CoffeeCartCardProps) {
             </Container>      
         </CoffeeContainer>       
     )
+}
+
+function removeCoffeeFromCart(id: number, arg1: string) {
+    throw new Error("Function not implemented.");
 }
