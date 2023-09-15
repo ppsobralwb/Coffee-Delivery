@@ -37,7 +37,7 @@ export function SelectedCoffees() {
                     <RegularText size="l" color="subtitle" weight={'bold'}>{formattedCartTotal}</RegularText>
                 </section>
             
-            <ConfirmationButton disabled={cartQuantity <= 0}>
+            <ConfirmationButton disabled={cartQuantity <= 0} type="submit">
                 CONFIRMAR PEDIDO
             </ConfirmationButton>
           </DetailsContainer>
