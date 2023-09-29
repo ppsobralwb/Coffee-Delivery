@@ -1,24 +1,21 @@
 import { ReactNode } from "react";
-import { IconContainer, InfoFormContainer } from "./styles";
 import { RegularText } from "../../../../components/Typography";
+import { InfoFormContainer } from "./styles";
 
 interface InfoFormProps {
-    icon: ReactNode;
-    title: string | ReactNode;
-    subtitle: string | ReactNode;
-    color: string;
+  title: string;
+  subtitle: string;
+  icon: ReactNode;
 }
 
-export default function InfoForm({ icon, title, subtitle, color }: InfoFormProps) {
-    return (
-        <InfoFormContainer>
-            <IconContainer color={color}>
-                {icon}
-            </IconContainer>
-            <section>
-                <RegularText color="subtitle">{title}</RegularText>
-                <RegularText size="s" color="text">{subtitle}</RegularText>
-            </section>
-        </InfoFormContainer>
-    )
+export function InfoForm({ title, subtitle, icon }: InfoFormProps) {
+  return (
+    <InfoFormContainer>
+      {icon}
+      <div>
+        <RegularText color="subtitle">{title}</RegularText>
+        <RegularText size="s">{subtitle}</RegularText>
+      </div>
+    </InfoFormContainer>
+  );
 }

@@ -1,61 +1,60 @@
-import { Trash } from "phosphor-react";
 import { QuantityInput } from "../../../../components/QuantityInput";
-import { CoffeeContainer, RemoveButton, InteractionContainer, CoffeeInfo, Container } from "./styles";
 import { RegularText } from "../../../../components/Typography";
-import { useTheme } from "styled-components";
+import {
+  ActionsContainer,
+  CoffeeContainer,
+  RemoveButton,
+} from "./styles";
+import { Trash } from "phosphor-react";
 import { CartItem } from "../../../../contexts/CartContext";
-import { formatMoney } from "../../../../utils/formatMoney";
 import { useCart } from "../../../../hooks/useCart";
+import { formatMoney } from "../../../../utils/formatMoney";
 
-interface CoffeeCartCardProps {
-    coffee: CartItem
+interface CoffeeProps {
+  coffee: CartItem;
 }
 
-export function Coffee({ coffee }: CoffeeCartCardProps) {
-    const { colors } = useTheme();
+export function Coffee({ coffee }: CoffeeProps) {
+  const { changeCartItemQuantity, removeCartItem } = useCart();
 
-    const {changeCartItemQuantity, removeCoffeeFromCart} = useCart();
+  function handleIncrease() {
+    changeCartItemQuantity(coffee.id, "increase");
+  }
 
-    function handleIncrease() {
-        changeCartItemQuantity(coffee.id, 'increase');
-    }
+  function handleDecrease() {
+    changeCartItemQuantity(coffee.id, "decrease");
+  }
 
-    function handleDecrease() {
-        changeCartItemQuantity(coffee.id, 'decrease');
-    }
+  function handleRemove() {
+    removeCartItem(coffee.id);
+  }
 
-    function handleRemove() {
-        removeCoffeeFromCart(coffee.id);
-    }
+  const coffeeTotal = coffee.price * coffee.quantity;
 
-    const coffeeTotal = coffee.price * coffee.quantity;
+  const formattedPrice = formatMoney(coffeeTotal);
 
-    const formattedPrice = formatMoney(coffeeTotal);
+  return (
+    <CoffeeContainer>
+      <div>
+        <img src={`/coffees/${coffee.photo}`} />
+        <div>
+          <RegularText color="subtitle">{coffee.name}</RegularText>
+          <ActionsContainer>
+            <QuantityInput
+              onIncrease={handleIncrease}
+              onDecrease={handleDecrease}
+              quantity={coffee.quantity}
+              size="small"
+            />
+            <RemoveButton type="button" onClick={handleRemove}>
+              <Trash size={16} />
+              REMOVER
+            </RemoveButton>
+          </ActionsContainer>
+        </div>
+      </div>
 
-    return (
-        <CoffeeContainer>
-            <img src={`/coffees/${coffee.photo}`} />
-            <Container>
-                <CoffeeInfo>
-                    <RegularText size="m" color="subtitle">
-                        {coffee.name}
-                    </RegularText>
-                    <RegularText size="m" color="text" weight={'bold-m'}>
-                        {formattedPrice}
-                    </RegularText>
-                </CoffeeInfo>
-                <InteractionContainer>
-                    <QuantityInput size="small" onIncrease={handleIncrease} onDecrease={handleDecrease} quantity={coffee.quantity} />
-                    <RemoveButton onClick={handleRemove}>
-                        <Trash size={16} color={colors.purple}/>
-                        REMOVER
-                    </RemoveButton>
-                </InteractionContainer>
-            </Container>      
-        </CoffeeContainer>       
-    )
-}
-
-function removeCoffeeFromCart(id: number, arg1: string) {
-    throw new Error("Function not implemented.");
+      <p>R$ {formattedPrice}</p>
+    </CoffeeContainer>
+  );
 }

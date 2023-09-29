@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CartContainer = styled.div`
+export const CartContainer = styled.form`
     margin-top: 2.5rem;
     width: 100%;
     display: flex;
